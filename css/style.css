@@ -1,0 +1,190 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@font-face {
+    font-family: "Android";
+    src: url('../fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+}
+/*
+#c5edd6
+#2a6644
+#47ad73
+#0d341e
+#5d7768
+*/
+*{  /*Configuraçoes globais*/
+    margin: 0px;
+    padding: 0px;
+}
+/*IMPORTANTE!!!  A ordem emplica no resultado por exemplo se voce colocar  
+' margin-bottom: 50px ' em cima de ' margin: auto ' nao funcionara !! */
+main{
+    background-color: white;
+    max-width: 1000px;
+    min-width: 300px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.397);
+    padding: 20px;
+    border-bottom-left-radius: 10px;  /*Configura so a borda baixo left*/
+    border-bottom-right-radius: 10px; /*aqui right*/
+    margin: auto;
+    margin-bottom: 50px;
+}
+main img {
+    width: 100%;
+}
+/*Percebe que .small de: ' img.small ' e junto de img se ouver espeço entre dois nao funciona */
+/*Para quemargin auto funcione precisamos primeiro tranformar a img em bloco*/
+main img.small{  /*Repare na ierarquia... */
+    max-width: 340px;  /*Aqui reduzimos o tamanho da img*/
+    display: block; /*Aqui tranformamos em bloco*/
+    margin: auto;
+}
+:root {
+    --color1:#06ab03;
+    --color2:#182619;
+    --color3: rgb(3, 88, 21);
+    --color4:#0d341e;
+    --color5:#5d7768;
+    --color6:#229635;
+    --fontpadrao: Arial, verdana, sans-serif;
+    --fontpadrao2: 'Bebas Neue', verdana, sans-serif;
+    --fontpadrao3: 'Android';
+}
+body{
+    background-color: var(--color3); 
+}
+main p{
+    margin: 16px 0px; /*Cima baixo esquerda direita*/
+    font-family: var(--fontpadrao2);
+    text-align: justify;
+    text-indent: 10px;
+    font-size: 1em; /*Tamnho literal*/
+    line-height: 2em; /*Espaçamento entre linhas*/
+}
+main strong{
+    font-weight: bold;
+    padding: 2px;
+}
+main a{
+    background-color: var(--color6);
+    color: var(--color2);
+    font-weight: 600;
+    padding: 2px;
+    text-decoration: none;
+}
+main a:hover {
+    text-decoration: underline;
+    color: #2f4a31;
+}
+header{
+    background-color: var(--color3);
+    text-align: center; /*caso nao funcione aplique a cada elemento*/
+    min-height: 190px; /*use para espassar coisas, em confluencia com as confugiraçoes de dentro de uma tag*/
+    padding-top: 30px;
+    background-image: linear-gradient(to bottom, var(--color3), var(--color4));
+}
+header > h1 { /*Se usa ' > ' Para aterar somente aquela tag. caso a tag tenha filhos so sera alterado ele proprio no caso ' h1 '*/
+    color: white;
+    margin-bottom: 25px;
+    font-family: var(--fontpadrao2);
+    font-size: 3.0em;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.363);
+}
+/*Toda vez que definimos height: e width: oir padrao criamos um displey block.
+i que altera a forma de anipular o elemento */
+header > p {
+    color: white;
+    font-family: var(--fontpadrao2);
+    max-width: 699px; /*max-width é Responsivo, diferente de so width*/
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: auto;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.363); 
+    /*Se voce por box shadow vai colirir a caixa do p header*/
+}
+nav{
+    background-color: var(--color4);
+    font-family: var(--fontpadrao2);
+    font-weight: bold;
+    padding: 10px;
+    box-shadow: 0px 5px 3px rgba(0, 0, 0, 0.363);
+}
+/*todas as tag tem um objeto caixa e texto que podem ser mexidas caixa ou texto somente algumas qye podem conter so cauxa sem texto quando digo caixa me refiro a blocos de displey bloco ativos ou nao*/
+nav > a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition-duration: .2s;
+}
+nav a:hover{
+    background-color: #085208;
+    color: var(--color1);
+}
+main h1 {
+    font-family: var(--fontpadrao3);
+    color: #0b520a;
+    font-size: 2em;
+}
+main h2 {
+    font-family: var(--fontpadrao3);
+    color: #0d670c;
+    background: linear-gradient(to right, #1f9a1d, transparent);
+    text-indent: 10px;
+}
+footer{
+    background-color: #0d341e;
+    color: rgb(180, 46, 46);
+    text-align: center;
+    font-size: 0.8em;
+    padding: 4px;
+}
+footer a { 
+    text-decoration: none;
+    font-weight: bolder; /*Peso da fonte*/
+    color: rgb(180, 46, 46);
+}
+footer a:hover{
+    color: rgb(225, 93, 93);
+    text-decoration: underline;
+}
+aside{ /*Aside e o conteudo periferico*/
+    background-color: rgb(81, 188, 81);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.372);
+}
+main a::after{
+    content: " \1F517\00a0";
+}
+aside h3{
+    background-color: var(--color4);
+    color: white;
+    padding: 5px;
+    margin: -10px -10px 0px -10px; /*O margin negativo é usado pra crescer pra fora*/
+    border-radius: 10px 10px 0px 0px;
+}
+aside ul{
+    list-style-type: "\2714\00a0\00a0"; /*O "\2714 reoresenta o emoji e \00a0 um esoaço vazio*/
+    list-style-position: inside; /*Coloca os pontos de uma lista do lado fe dentro do paragrafo*/
+    columns: 2; /*quebra em dois a lista*/
+}
+div.video{
+    background-color: #abbcd1;
+    position: relative;
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 58%; /*Neste caso nao foi usado nem height
+    nem width . a pseudo caixa foi definida pelo pading e qiando usamos porcentegem  height: 90%;
+    width: 95%; no iframe estamos pegando as medidas de um peding feito aqui */
+}
+div.video > iframe{
+    position: absolute; /*Quando eu coloco position: absolute permite eu usar top e left*/
+    top: 25px;
+    left: 25px;
+    height: 90%;
+    width: 95%;
+}

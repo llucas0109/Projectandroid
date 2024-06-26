@@ -15,14 +15,22 @@ This project is a website that shares interesting facts and stories about techno
 
 
 ├── index.html
-<hr>
+<br>
 ├── style.css
+<br>
 ├── imagens
+<br>
 │ ├── favicon.ico
+<br>
 │ ├── dan-droids.png
+<br>
 │ ├── dan-droids-pq.png
+<br>
 │ ├── irina-blok.jpg
-│ ├── irina-blok-pq.jpgM
+<br>
+│ ├── irina-blok-pq.jpg
+<br>
 │ ├── bugdroid.png
+<br>
 └── css
 └── style.css
